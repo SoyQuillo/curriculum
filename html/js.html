@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hola bienvenido
+    <input type="text" id="valor" placeholder="Escriba un valor">
+    <button id="btn_enviar" onclick="calcular()" >ENVIAR</button>
+    <h1 id="titulo"> </h1>
+<script>
+        //VARIABLES
+        const nameuno = "hector";
+        var nameDos = "jose";
+        let nameTres = "riaño";
+        console.log(nameuno+" "+ nameDos);
+
+
+        // TIPOS DE DATOS
+        let num_a=5;
+        let num_b=10.2;
+        let boolean = false;
+        let stringvar = "hola soy un string";
+        console.log(stringvar)
+        let arraynum =[1,2,3,4,5,"6","7","8"];
+        let dias_semana =["Lunes","Martes","Miercoles","Jueves","viernes","Sabado","Domingo"];
+        let users = [{name:"hector", last_name:"riaño",age:18},
+                    {name:"jose", last_name:"lopez",age:18},
+                    {name:"betty", last_name:"rincon",age:18}
+    ]
+        console.log(num_a+num_b);
+
+
+        let suma    =num_a+num_b;
+        let resta   =num_b-num_a;
+        let multi   =num_a*num_b;
+        let divi    =num_b/num_a;
+        let module  =num_b%num_a;
+        let expo    =num_a^num_b;
+
+
+    
+
+        // operadores logicos 
+
+        var elvisLives = Math.PI > 4 ? "Sip" : "Nop";
+        console.log(elvisLives);
+        let operador = true;
+        console.log(!operador);
+        // Estructuras condicionales
+        let cantarray = arraynum.length;
+        if (cantarray > 7){
+            console.log(cantarray);
+            console.log(arraynum[6]);
+            console.log(dias_semana[2]);
+            console.log(dias_semana);
+        }
+
+        for (let i=0;i<dias_semana.length;i++){
+            console.log(dias_semana[i]);
+        }
+
+        function calcular(){
+           let namevar = document.getElementById('valor').value;
+           namevar = namevar.toUpperCase();
+           document.getElementById("Titulo").innerText = namevar;
+        }
+
+        document.getElementById("btn_enviar").addEventListener("click", function()){
+            document.getElementById("titulo").style.color  ="red";
+            document.getElementById("titulo").style.backgroundColor =  "aqua";
+        }
+
+
+    </script>
+
+
+</body>
+</html>
